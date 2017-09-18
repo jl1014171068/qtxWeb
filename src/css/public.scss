@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+.full_columns {
+    width: 1200px;
+    min-height: 10px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+.clear {
+    zoom: 1;
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+body,
+html {
+    margin: 0;
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica', 'STHeitiSC-Light', 'Arial', 'sans-serif' !important;
+    min-width: 1200px;
+}
+
+li,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+//颜色定义
+.starColor{
+    color:#fa1939;
+}
+//清除ios下默认的样式
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+textarea,
+button,
+input[type="text"] {
+    -webkit-appearance: none;
+}
+.lm_arrow {
+    font-size: 0;
+    line-height: 0;
+    vertical-align: -4px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-color: #777 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    transition: 0.2s ease-in;
+}
+
+//溢出省略号
+.textOverflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+
+//距离公用
+.mt30{
+    margin-top: 30px !important;
+}
