@@ -173,24 +173,25 @@ $(function() {
 										});
 										item.find(".pub_hotRefresh_box").css("display", "none");
 //										item.css("overflow", "visible");
+										if(currpage % 2 == 0) {
+											    $dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").removeClass("AMhide");
+												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_back").addClass("AMhide");
+												$dom.addClass("active").removeClass("out")
+										} else {
+											    $dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").addClass("AMhide");
+												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_back").removeClass("AMhide");
+												$dom.addClass("out").removeClass("active")
+										}
 									},
 									array[i].src = src;
 							}
-							if($dom.hasClass('out')) {
-									console.log(1)
-									$dom.addClass("active").removeClass("out")
-								} else if($dom.hasClass('active')) {
-									console.log(2);
-									$dom.addClass("out").removeClass("active")
-								}
 						}
 					});
 					return false;
 				});
 			});
-
 		}
-	})
+	}) 
 	var defaluts = {
 		url: "/yinuovip/libs/data.json",
 		type: "get",

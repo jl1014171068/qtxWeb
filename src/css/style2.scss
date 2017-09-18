@@ -523,89 +523,123 @@
             }
         }
     }
-    &.out {
-        .pub_hotRefresh_wrapper {
-            .pub_hotRefresh_item {
-                .pub_hotRefresh_front {
-                    &:nth-child(1) {
-                        animation: rotateshow 1s ease-in-out forwards;
-                    }
-                    &:nth-child(2) {
-                        .pub_hotRefresh_front {
-                            animation: rotateshow 1s 0.2s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(3),
-                    &:nth-child(7) {
-                        .pub_hotRefresh_front {
-                            animation: rotateshow 1s 0.4s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(4),
-                    &:nth-child(8) {
-                        .pub_hotRefresh_front {
-                            animation: rotateshow 1s 0.6s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(5),
-                    &:nth-child(9) {
-                        .pub_hotRefresh_front {
-                            animation: rotateshow 1s 0.8s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(10),
-                    &:nth-child(6) {
-                        .pub_hotRefresh_front {
-                            animation: rotateshow 1s 1s ease-in-out forwards;
-                        }
-                    }
-                }
-                .pub_hotRefresh_back{
-                }
-            }
-        }
-    }
     &.active {
         .pub_hotRefresh_wrapper {
             .pub_hotRefresh_item {
-                .pub_hotRefresh_back{
-
-                    &:nth-child(1) {
+                &:nth-child(1) {
+                    .pub_hotRefresh_back {
+                        animation: rotateshow 1s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
                         animation: rotatehide 1s ease-in-out forwards;
                     }
-                    &:nth-child(2) {
-                        .pub_hotRefresh_front {
-                            animation: rotatehide 1s 0.2s ease-in-out forwards;
-                        }
+                }
+                &:nth-child(2) {
+                  .pub_hotRefresh_back {
+                        animation: rotateshow 1s 0.2s ease-in-out forwards;
                     }
-                    &:nth-child(3),
-                    &:nth-child(7) {
-                        .pub_hotRefresh_front {
-                            animation: rotatehide 1s 0.4s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(4),
-                    &:nth-child(8) {
-                        .pub_hotRefresh_front {
-                            animation: rotatehide 1s 0.6s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(5),
-                    &:nth-child(9) {
-                        .pub_hotRefresh_front {
-                            animation: rotatehide 1s 0.8s ease-in-out forwards;
-                        }
-                    }
-                    &:nth-child(10),
-                    &:nth-child(6) {
-                        .pub_hotRefresh_front {
-                            animation: rotatehide 1s 1s ease-in-out forwards;
-                        }
+                    .pub_hotRefresh_front {
+                        animation: rotatehide 1s 0.2s ease-in-out forwards;
                     }
                 }
-                .pub_hotRefresh_front{
+                &:nth-child(3),
+                &:nth-child(7) {
+                    .pub_hotRefresh_back {
+                        animation: rotateshow 1s 0.4s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
+                        animation: rotatehide 1s 0.4s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(4),
+                &:nth-child(8) {
+                      .pub_hotRefresh_back {
+                        animation: rotateshow 1s 0.6s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
+                        animation: rotatehide 1s 0.6s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(5),
+                &:nth-child(9) {
+                     .pub_hotRefresh_back {
+                        animation: rotateshow 1s 0.8s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
+                        animation: rotatehide 1s 0.8s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(10),
+                &:nth-child(6) {
+                   .pub_hotRefresh_back {
+                        animation: rotateshow 1s 1s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
+                        animation: rotatehide 1s 1s ease-in-out forwards;
+                    }
+                }
 
+            }
+        }
+    }
+    &.out {
+        .pub_hotRefresh_wrapper {
+            .pub_hotRefresh_item {
+                &:nth-child(1) {
+                     .pub_hotRefresh_front {
+                        animation: rotateshow 1s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_back {
+                        animation: rotatehide 1s ease-in-out forwards;
+                    }
                 }
+                &:nth-child(2) {
+                    .pub_hotRefresh_front {
+                        animation: rotateshow 1s 0.2s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_back {
+                        animation: rotatehide 1s 0.2s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(3),
+                &:nth-child(7) {
+                     .pub_hotRefresh_front {
+                        animation: rotateshow 1s 0.4s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_back {
+                        animation: rotatehide 1s 0.4s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(4),
+                &:nth-child(8) {
+                    .pub_hotRefresh_front {
+                        animation: rotateshow 1s 0.6s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_back {
+                        animation: rotatehide 1s 0.6s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(5),
+                &:nth-child(9) {
+                   .pub_hotRefresh_back {
+                        animation: rotatehide 1s 0.8s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
+                        animation: rotateshow 1s 0.8s ease-in-out forwards;
+                    }
+                }
+                &:nth-child(10),
+                &:nth-child(6) {
+                   .pub_hotRefresh_back {
+                        animation: rotatehide 1s 1s ease-in-out forwards;
+                    }
+                    .pub_hotRefresh_front {
+                        animation: rotateshow 1s 1s ease-in-out forwards;
+                    }
+                }
+
+                .pub_hotRefresh_front {
+                    }
             }
         }
     }
