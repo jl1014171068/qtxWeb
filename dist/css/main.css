@@ -3956,7 +3956,7 @@ input[type=submit] {
       font-style: normal;
       font-stretch: normal;
       color: #000000;
-      margin: 0 40px 0  0; }
+      margin: 0 40px 0 0; }
     .pub_hotRefresh .title .refresh {
       display: inline-block;
       cursor: pointer; }
@@ -3968,6 +3968,30 @@ input[type=submit] {
         vertical-align: middle; }
       .pub_hotRefresh .title .refresh.active img {
         animation: rotate 1s linear infinite; }
+  .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(1) {
+    animation: rotateshow 1s ease-in-out forwards; }
+  .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(2) .pub_hotRefresh_front {
+    animation: rotateshow 1s 0.2s ease-in-out forwards; }
+  .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(3) .pub_hotRefresh_front, .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(7) .pub_hotRefresh_front {
+    animation: rotateshow 1s 0.4s ease-in-out forwards; }
+  .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(4) .pub_hotRefresh_front, .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(8) .pub_hotRefresh_front {
+    animation: rotateshow 1s 0.6s ease-in-out forwards; }
+  .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(5) .pub_hotRefresh_front, .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(9) .pub_hotRefresh_front {
+    animation: rotateshow 1s 0.8s ease-in-out forwards; }
+  .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(10) .pub_hotRefresh_front, .pub_hotRefresh.out .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front:nth-child(6) .pub_hotRefresh_front {
+    animation: rotateshow 1s 1s ease-in-out forwards; }
+  .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(1) {
+    animation: rotatehide 1s ease-in-out forwards; }
+  .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(2) .pub_hotRefresh_front {
+    animation: rotatehide 1s 0.2s ease-in-out forwards; }
+  .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(3) .pub_hotRefresh_front, .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(7) .pub_hotRefresh_front {
+    animation: rotatehide 1s 0.4s ease-in-out forwards; }
+  .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(4) .pub_hotRefresh_front, .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(8) .pub_hotRefresh_front {
+    animation: rotatehide 1s 0.6s ease-in-out forwards; }
+  .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(5) .pub_hotRefresh_front, .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(9) .pub_hotRefresh_front {
+    animation: rotatehide 1s 0.8s ease-in-out forwards; }
+  .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(10) .pub_hotRefresh_front, .pub_hotRefresh.active .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back:nth-child(6) .pub_hotRefresh_front {
+    animation: rotatehide 1s 1s ease-in-out forwards; }
   .pub_hotRefresh .pub_hotRefresh_wrapper {
     width: 100%;
     height: 280px;
@@ -3995,64 +4019,14 @@ input[type=submit] {
             display: inline; }
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(1) .pub_hotRefresh_box .year, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(2) .pub_hotRefresh_box .year {
             display: none; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(1).acive .pub_hotRefresh_back {
-        animation: rotatehide 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(1).acive .pub_hotRefresh_front {
-        animation: rotatehide 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(1).out .pub_hotRefresh_front {
-        animation: rotateshow 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(1).out .pub_hotRefresh_back {
-        animation: rotatehide 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(2).acive .pub_hotRefresh_back {
-        animation: rotateshow 1s 0.2s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(2).acive .pub_hotRefresh_front {
-        animation: rotatehide 1s 0.2s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(2).out .pub_hotRefresh_front {
-        animation: rotateshow 1s 0.2s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(2).out .pub_hotRefresh_back {
-        animation: rotatehide 1s 0.2s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(3).acive .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(7).acive .pub_hotRefresh_back {
-        animation: rotateshow 1s 0.4s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(3).acive .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(7).acive .pub_hotRefresh_front {
-        animation: rotatehide 1s 0.4s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(3).out .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(7).out .pub_hotRefresh_front {
-        animation: rotateshow 1s 0.4s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(3).out .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(7).out .pub_hotRefresh_back {
-        animation: rotatehide 1s 0.4s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(4).acive .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(8).acive .pub_hotRefresh_back {
-        animation: rotateshow 1s 0.6s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(4).acive .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(8).acive .pub_hotRefresh_front {
-        animation: rotatehide 1s 0.6s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(4).out .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(8).out .pub_hotRefresh_front {
-        animation: rotateshow 1s 0.6s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(4).out .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(8).out .pub_hotRefresh_back {
-        animation: rotatehide 1s 0.6s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(5).acive .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(9).acive .pub_hotRefresh_back {
-        animation: rotateshow 1s 0.8s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(5).acive .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(9).acive .pub_hotRefresh_front {
-        animation: rotatehide 1s 0.8s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(5).out .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(9).out .pub_hotRefresh_back {
-        animation: rotatehide 1s 0.8s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(5).out .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(9).out .pub_hotRefresh_front {
-        animation: rotateshow 1s 0.8s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(10).acive .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(6).acive .pub_hotRefresh_back {
-        animation: rotateshow 1s 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(10).acive .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(6).acive .pub_hotRefresh_front {
-        animation: rotatehide 1s 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(10).out .pub_hotRefresh_back, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(6).out .pub_hotRefresh_back {
-        animation: rotatehide 1s 1s ease-in-out forwards; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(10).out .pub_hotRefresh_front, .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(6).out .pub_hotRefresh_front {
-        animation: rotateshow 1s 1s ease-in-out forwards; }
       .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(10), .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item:nth-child(6) {
         margin-right: 0; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back,
       .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0; }
-        .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back img,
         .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front img {
           width: 100%;
           height: 100%;
@@ -4060,12 +4034,10 @@ input[type=submit] {
           top: 0;
           left: 0;
           transition: all, 0.6s; }
-        .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back a,
         .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front a {
           position: absolute;
           width: 100%;
           height: 100%; }
-        .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box,
         .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box {
           width: 130px;
           height: 130px;
@@ -4075,20 +4047,16 @@ input[type=submit] {
           font-size: 12px;
           text-align: center;
           vertical-align: middle; }
-          .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box .info,
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box .info {
             display: none; }
-          .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box div,
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box div {
             display: inline-block; }
-          .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box h3,
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box h3 {
             color: #fff;
             font-size: 12px;
             font-weight: 500;
             margin: 0;
             line-height: 12px; }
-          .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box h4,
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box h4 {
             color: #fff;
             font-size: 12px;
@@ -4096,27 +4064,12 @@ input[type=submit] {
             display: inline;
             margin: 0;
             line-height: 12px; }
-          .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box p,
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box p {
             text-align: center;
             margin: 0; }
-          .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back .pub_hotRefresh_box a,
           .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_front .pub_hotRefresh_box a {
             color: #fff;
             text-decoration: none; }
-      .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0; }
-        .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item .pub_hotRefresh_back img {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: all, 0.6s; }
       .pub_hotRefresh .pub_hotRefresh_wrapper .pub_hotRefresh_item.imghover img {
         width: 100%;
         height: 100%;

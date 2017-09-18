@@ -1,14 +1,13 @@
-//banner图模块
-var swiper = new Swiper('.banner_container', {
-	pagination: '.banner_container_pagination',
-	paginationClickable: true,
-	spaceBetween: 30,
-	centeredSlides: true,
-	autoplay: 2500,
-	autoplayDisableOnInteraction: false
-});
-
 $(function() {
+	//banner图模块
+	var swiper = new Swiper('.banner_container', {
+		pagination: '.banner_container_pagination',
+		paginationClickable: true,
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoplay: 2500,
+		autoplayDisableOnInteraction: false
+	});
 	/**
 	 * 首页三级菜单
 	 * @param $
@@ -148,57 +147,46 @@ $(function() {
 						data: opts.data,
 						success: function(result) {
 							window.result = result;
-							console.log(result);
 							currpage++;
 							for(var i = 0; i < result.Data.length; i++) {
 								var data = result.Data[i];
 								var src = "https://cdn.ywart.com/yw/" + data.ImgFileName;
 								array[i] = new Image;
-								var front = $dom.find('.pub_hotRefresh_front');
+								var front = $dom.find('.pub_hotRefresh_front'),
+									item = $dom.find('.pub_hotRefresh_item');
 								currpage % 2 == 0 && (front = $dom.find('.pub_hotRefresh_back'));
 								array[i].onload = function() {
-									front.eq(i).find('img').attr("alt", data.ArtistName + " " + data.ArtworkName).attr('src', src);
-									front.eq(i).find("a").attr("href", "/artworks/" + data.ArtworkCode),
-										front.eq(i).find("h3").text(data.ArtistName),
-										front.eq(i).find("h4").text(data.ArtworkName),
-										front.eq(i).find(".info").html("<br />" + data.Material + " " + data.Size),
-										front.eq(i).find(".year").text(data.CreateDateText),
-										front.eq(i).find(".ysp_price").text("¥" + data.PriceSaleText),
-										++count == data.length && ($(".pub_hotRefresh_item").off("mousemove mouseleave"),
-											$(".pub_hotRefresh_item").find("img").css({
-												width: "100%",
-												height: "100%",
-												position: "absolute",
-												top: "0",
-												left: "0"
-											}),
-											$(".pub_hotRefresh_item").find(".pub_hotRefresh_box").css("display", "none"),
-											$(".pub_hotRefresh_item").css("overflow", "visible"),
-											i % 2 == 0 ? ($(".pub_hotRefresh_item .pub_hotRefresh_front").removeClass("AMhide"),
-												$(".pub_hotRefresh_item .pub_hotRefresh_back").addClass("AMhide"),
-												$(".pub_hotRefresh_item").addClass("active").removeClass("out")) : ($(".pub_hotRefresh_item .pub_hotRefresh_front").addClass("AMhide"),
-												$(".pub_hotRefresh_item .pub_hotRefresh_back").removeClass("AMhide"),
-												$(".pub_hotRefresh_item").addClass("out").removeClass("active")),
-											setTimeout(function() {
-												$(".pub_hotRefresh .refresh").removeClass("active"), $(".pub_hotRefresh .refresh").one("click", e), t()
-											}, 2e3))
-								}, array[i].src = src
+										front.eq(i).find('img').attr("alt", data.ArtistName + " " + data.ArtworkName).attr('src', src);
+										front.eq(i).find("a").attr("href", "/artworks/" + data.ArtworkCode),
+											front.eq(i).find("h3").text(data.ArtistName),
+											front.eq(i).find("h4").text(data.ArtworkName),
+											front.eq(i).find(".info").html("<br />" + data.Material + " " + data.Size),
+											front.eq(i).find(".year").text(data.CreateDateText),
+											front.eq(i).find(".ysp_price").text("¥" + data.PriceSaleText),
+											++count == data.length && item.off("mousemove mouseleave");
+										item.find("img").css({
+											width: "100%",
+											height: "100%",
+											position: "absolute",
+											top: "0",
+											left: "0"
+										});
+										item.find(".pub_hotRefresh_box").css("display", "none");
+//										item.css("overflow", "visible");
+									},
+									array[i].src = src;
 							}
+							if($dom.hasClass('out')) {
+									console.log(1)
+									$dom.addClass("active").removeClass("out")
+								} else if($dom.hasClass('active')) {
+									console.log(2);
+									$dom.addClass("out").removeClass("active")
+								}
 						}
 					});
+					return false;
 				});
-				var t = document.body.clientHeight;
-				t + $(document).scrollTop() > 1573 && !$dom.find(".pub_hotRefresh_wrapper").hasClass("active") && $dom.find(".pub_hotRefresh_wrapper").addClass("active").css(
-					"top", "50px").stop().animate({
-					top: "0"
-				})
-				$(window).on("scroll", function() {
-					var t = document.body.clientHeight;
-					t + $(document).scrollTop() > 1573 && !$dom.find(".pub_hotRefresh_wrapper").hasClass("active") && $dom.find(".pub_hotRefresh_wrapper").addClass("active").css(
-						"top", "50px").stop().animate({
-						top: "0"
-					})
-				})
 			});
 
 		}

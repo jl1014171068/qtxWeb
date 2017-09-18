@@ -33,7 +33,8 @@ function t() {
 					c % 2 == 0 && (l = $(".pub_hotRefresh_item .pub_hotRefresh_back")), 
 					i[a].onload = function() {
 						l.eq(a).find("img").attr("alt", o.Data[a].ArtistName + " " + o.Data[a].ArtworkName)
-						    .attr("src", n), l.eq(a).find("a").attr("href", "/artworks/" + o.Data[a].ArtworkCode), l.eq(a)
+						    .attr("src", n), 
+						    l.eq(a).find("a").attr("href", "/artworks/" + o.Data[a].ArtworkCode), l.eq(a)
 							.find("h3").text(o.Data[a].ArtistName),
 							l.eq(a).find("h4").text(o.Data[a].ArtworkName),
 							l.eq(a).find(".info").html("<br />" + o.Data[a].Material + " " + o.Data[a].Size),

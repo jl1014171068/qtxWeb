@@ -504,7 +504,7 @@
             font-style: normal;
             font-stretch: normal;
             color: #000000;
-            margin: 0 40px 0  0;
+            margin: 0 40px 0 0;
         }
         .refresh {
             display: inline-block;
@@ -519,6 +519,92 @@
             &.active {
                 img {
                     animation: rotate 1s linear infinite;
+                }
+            }
+        }
+    }
+    &.out {
+        .pub_hotRefresh_wrapper {
+            .pub_hotRefresh_item {
+                .pub_hotRefresh_front {
+                    &:nth-child(1) {
+                        animation: rotateshow 1s ease-in-out forwards;
+                    }
+                    &:nth-child(2) {
+                        .pub_hotRefresh_front {
+                            animation: rotateshow 1s 0.2s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(3),
+                    &:nth-child(7) {
+                        .pub_hotRefresh_front {
+                            animation: rotateshow 1s 0.4s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(4),
+                    &:nth-child(8) {
+                        .pub_hotRefresh_front {
+                            animation: rotateshow 1s 0.6s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(5),
+                    &:nth-child(9) {
+                        .pub_hotRefresh_front {
+                            animation: rotateshow 1s 0.8s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(10),
+                    &:nth-child(6) {
+                        .pub_hotRefresh_front {
+                            animation: rotateshow 1s 1s ease-in-out forwards;
+                        }
+                    }
+                }
+                .pub_hotRefresh_back{
+                }
+            }
+        }
+    }
+    &.active {
+        .pub_hotRefresh_wrapper {
+            .pub_hotRefresh_item {
+                .pub_hotRefresh_back{
+
+                    &:nth-child(1) {
+                        animation: rotatehide 1s ease-in-out forwards;
+                    }
+                    &:nth-child(2) {
+                        .pub_hotRefresh_front {
+                            animation: rotatehide 1s 0.2s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(3),
+                    &:nth-child(7) {
+                        .pub_hotRefresh_front {
+                            animation: rotatehide 1s 0.4s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(4),
+                    &:nth-child(8) {
+                        .pub_hotRefresh_front {
+                            animation: rotatehide 1s 0.6s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(5),
+                    &:nth-child(9) {
+                        .pub_hotRefresh_front {
+                            animation: rotatehide 1s 0.8s ease-in-out forwards;
+                        }
+                    }
+                    &:nth-child(10),
+                    &:nth-child(6) {
+                        .pub_hotRefresh_front {
+                            animation: rotatehide 1s 1s ease-in-out forwards;
+                        }
+                    }
+                }
+                .pub_hotRefresh_front{
+
                 }
             }
         }
@@ -556,124 +642,10 @@
                     }
                 }
             }
-            &:nth-child(1) {
-                &.acive {
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotatehide 1s ease-in-out forwards;
-                    }
-                }
-                &.out {
-                    .pub_hotRefresh_front {
-                        animation: rotateshow 1s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s ease-in-out forwards;
-                    }
-                }
-
-            }
-            &:nth-child(2) {
-                &.acive {
-                    .pub_hotRefresh_back {
-                        animation: rotateshow 1s 0.2s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotatehide 1s 0.2s ease-in-out forwards;
-                    }
-                }
-                &.out {
-                    .pub_hotRefresh_front {
-                        animation: rotateshow 1s 0.2s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s 0.2s ease-in-out forwards;
-                    }
-                }
-            }
-            &:nth-child(3),
-            &:nth-child(7) {
-                &.acive {
-                    .pub_hotRefresh_back {
-                        animation: rotateshow 1s 0.4s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotatehide 1s 0.4s ease-in-out forwards;
-                    }
-                }
-                &.out {
-                    .pub_hotRefresh_front {
-                        animation: rotateshow 1s 0.4s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s 0.4s ease-in-out forwards;
-                    }
-                }
-            }
-            &:nth-child(4),
-            &:nth-child(8) {
-                &.acive {
-                    .pub_hotRefresh_back {
-                        animation: rotateshow 1s 0.6s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotatehide 1s 0.6s ease-in-out forwards;
-                    }
-                }
-                &.out {
-                    .pub_hotRefresh_front {
-                        animation: rotateshow 1s 0.6s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s 0.6s ease-in-out forwards;
-                    }
-                }
-            }
-            &:nth-child(5),
-            &:nth-child(9) {
-                &.acive {
-                    .pub_hotRefresh_back {
-                        animation: rotateshow 1s 0.8s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotatehide 1s 0.8s ease-in-out forwards;
-                    }
-                }
-                &.out {
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s 0.8s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotateshow 1s 0.8s ease-in-out forwards;
-                    }
-                }
-            }
-            &:nth-child(10),
-            &:nth-child(6) {
-                &.acive {
-                    .pub_hotRefresh_back {
-                        animation: rotateshow 1s 1s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotatehide 1s 1s ease-in-out forwards;
-                    }
-                }
-                &.out {
-                    .pub_hotRefresh_back {
-                        animation: rotatehide 1s 1s ease-in-out forwards;
-                    }
-                    .pub_hotRefresh_front {
-                        animation: rotateshow 1s 1s ease-in-out forwards;
-                    }
-                }
-            }
             &:nth-child(10),
             &:nth-child(6) {
                 margin-right: 0;
             }
-            .pub_hotRefresh_back,
             .pub_hotRefresh_front {
                 width: 100%;
                 height: 100%;
@@ -732,21 +704,6 @@
                         color: #fff;
                         text-decoration: none;
                     }
-                }
-            }
-            .pub_hotRefresh_back {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transition: all, 0.6s;
                 }
             }
             &.imghover {
