@@ -37,10 +37,13 @@ require(["jquery", "carousel", "arttemplate", "bus", "common", "dotdotdot", "laz
                                 position: "absolute",
                                 top: "0",
                                 left: "0"
-                            }), $(".NEW").find(".info_box").css("display", "none"), $(".NEW").css("overflow", "visible"),
-                                c % 2 == 0 ? ($(".NEW .front").removeClass("AMhide"), $(".NEW .back").addClass("AMhide"),
+                            }), $(".NEW").find(".info_box").css("display", "none"), 
+                            $(".NEW").css("overflow", "visible"),
+                                c % 2 == 0 ? ($(".NEW .front").removeClass("AMhide"),
+                                $(".NEW .back").addClass("AMhide"),
                                 $(".NEW").addClass("active").removeClass("out")) : ($(".NEW .front").addClass("AMhide"),
-                                $(".NEW .back").removeClass("AMhide"), $(".NEW").addClass("out").removeClass("active")),
+                                $(".NEW .back").removeClass("AMhide"),
+                                $(".NEW").addClass("out").removeClass("active")),
                                 setTimeout(function () {
                                 $(".NEWS .refresh").removeClass("active"), $(".NEWS .refresh").one("click", e), t()
                             }, 2e3))

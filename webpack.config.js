@@ -39,7 +39,6 @@ const loaders = [{
 		use: ExtractTextPlugin.extract({
 			fallback: 'style-loader',
 			use: [
-
 				{
 					loader: 'css-loader',
 					options: {
@@ -48,6 +47,9 @@ const loaders = [{
 				},
 				{
 					loader: 'postcss-loader'
+				},
+				{
+					loader:'css?modules&importLoaders=2&localIdentName=[path]_[name]_[local]'
 				}
 			]
 		})

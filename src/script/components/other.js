@@ -138,7 +138,18 @@ $(function() {
 					$trigger = $(this).find('.refresh'),
 					currpage = 1,
 					array = [],
-					count = 0;
+					count = 0,
+					item = $dom.find('.pub_hotRefresh_item');
+
+//				function hotRefresh_hover() {
+//					item.css("overflow", "hidden"), item.on("mousemove", function() {
+//						$(this).addClass("imghover"), $(this).find(".pub_hotRefresh_box").css("display", "table-cell")
+//					}), 
+//					item.on("mouseleave", function() {}), item.on("mouseleave", function() {
+//						$(this).removeClass("imghover"), $(this).find(".pub_hotRefresh_box").css("display", "none")
+//					})
+//				}
+				hotRefresh_hover();
 				$trigger.click(function() {
 					$.ajax({
 						type: opts.type,
@@ -151,47 +162,50 @@ $(function() {
 							for(var i = 0; i < result.Data.length; i++) {
 								var data = result.Data[i];
 								var src = "https://cdn.ywart.com/yw/" + data.ImgFileName;
-								array[i] = new Image;
-								var front = $dom.find('.pub_hotRefresh_front'),
-									item = $dom.find('.pub_hotRefresh_item');
-								currpage % 2 == 0 && (front = $dom.find('.pub_hotRefresh_back'));
-								array[i].onload = function() {
-										front.eq(i).find('img').attr("alt", data.ArtistName + " " + data.ArtworkName).attr('src', src);
-										front.eq(i).find("a").attr("href", "/artworks/" + data.ArtworkCode),
-											front.eq(i).find("h3").text(data.ArtistName),
-											front.eq(i).find("h4").text(data.ArtworkName),
-											front.eq(i).find(".info").html("<br />" + data.Material + " " + data.Size),
-											front.eq(i).find(".year").text(data.CreateDateText),
-											front.eq(i).find(".ysp_price").text("¥" + data.PriceSaleText),
-											++count == data.length && item.off("mousemove mouseleave");
-										item.find("img").css({
-											width: "100%",
-											height: "100%",
-											position: "absolute",
-											top: "0",
-											left: "0"
-										});
-										item.find(".pub_hotRefresh_box").css("display", "none");
-//										item.css("overflow", "visible");
-										if(currpage % 2 == 0) {
-											    $dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").removeClass("AMhide");
+								! function(i) {
+									array[i] = new Image;
+									var front = $dom.find('.pub_hotRefresh_front');
+									currpage % 2 == 0 && (front = $dom.find('.pub_hotRefresh_back'));
+									array[i].onload = function() {
+											front.eq(i).find('img').attr("alt", data.ArtistName + " " + data.ArtworkName).attr('src', src);
+											front.eq(i).find("a").attr("href", "/artworks/" + data.ArtworkCode),
+												front.eq(i).find("h3").text(data.ArtistName),
+												front.eq(i).find("h4").text(data.ArtworkName),
+												front.eq(i).find(".info").html("<br />" + data.Material + " " + data.Size),
+												front.eq(i).find(".year").text(data.CreateDateText),
+												front.eq(i).find(".ysp_price").text("¥" + data.PriceSaleText),
+												++count == data.length && item.off("mousemove mouseleave");
+											item.find("img").css({
+												width: "100%",
+												height: "100%",
+												position: "absolute",
+												top: "0",
+												left: "0"
+											});
+											item.find(".pub_hotRefresh_box").css("display", "none");
+											item.css("overflow", "visible");
+											if(currpage % 2 == 0) {
+												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").removeClass("AMhide");
 												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_back").addClass("AMhide");
-												$dom.addClass("active").removeClass("out")
-										} else {
-											    $dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").addClass("AMhide");
+												item.addClass("active").removeClass("out")
+											} else {
+												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").addClass("AMhide");
 												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_back").removeClass("AMhide");
-												$dom.addClass("out").removeClass("active")
-										}
-									},
-									array[i].src = src;
+												item.addClass("out").removeClass("active")
+											}
+
+										},
+										array[i].src = src;
+								}(i);
 							}
+							hotRefresh_hover();
 						}
 					});
 					return false;
 				});
 			});
 		}
-	}) 
+	})
 	var defaluts = {
 		url: "/yinuovip/libs/data.json",
 		type: "get",
@@ -199,5 +213,4 @@ $(function() {
 		data: { currpage: 1, pageSize: 10 },
 		dom: '.pub_hotRefresh'
 	};
-
 }(window.jQuery));
