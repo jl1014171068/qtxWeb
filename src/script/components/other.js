@@ -149,7 +149,7 @@ $(function() {
 //						$(this).removeClass("imghover"), $(this).find(".pub_hotRefresh_box").css("display", "none")
 //					})
 //				}
-				hotRefresh_hover();
+//				hotRefresh_hover();
 				$trigger.click(function() {
 					$.ajax({
 						type: opts.type,
@@ -159,30 +159,29 @@ $(function() {
 						success: function(result) {
 							window.result = result;
 							currpage++;
-							for(var i = 0; i < result.Data.length; i++) {
-								var data = result.Data[i];
-								var src = "https://cdn.ywart.com/yw/" + data.ImgFileName;
+							for(var i = 0; i < result.datas.length; i++) {
+								var data = result.datas[i];
+								var src = data.goods_image;
 								! function(i) {
 									array[i] = new Image;
 									var front = $dom.find('.pub_hotRefresh_front');
 									currpage % 2 == 0 && (front = $dom.find('.pub_hotRefresh_back'));
 									array[i].onload = function() {
-											front.eq(i).find('img').attr("alt", data.ArtistName + " " + data.ArtworkName).attr('src', src);
-											front.eq(i).find("a").attr("href", "/artworks/" + data.ArtworkCode),
-												front.eq(i).find("h3").text(data.ArtistName),
-												front.eq(i).find("h4").text(data.ArtworkName),
-												front.eq(i).find(".info").html("<br />" + data.Material + " " + data.Size),
-												front.eq(i).find(".year").text(data.CreateDateText),
-												front.eq(i).find(".ysp_price").text("¥" + data.PriceSaleText),
+											front.eq(i).find('img').attr("alt", data.goods_name).attr('src', src);
+											front.eq(i).find("a").attr("href", data.link),
+												front.eq(i).find("h3").text(data.goods_name),
+												front.eq(i).find(".price").text(data.goods_price),
+												front.eq(i).find(".goods_marketprice").text(data.goods_marketprice),
+												front.eq(i).find(".count").text(data.count),
 												++count == data.length && item.off("mousemove mouseleave");
 											item.find("img").css({
-												width: "100%",
-												height: "100%",
-												position: "absolute",
-												top: "0",
-												left: "0"
+//												width: "100%",
+//												height: "100%",
+//												position: "absolute",
+//												top: "0",
+//												left: "0"
 											});
-											item.find(".pub_hotRefresh_box").css("display", "none");
+//											item.find(".pub_hotRefresh_box").css("display", "none");
 											item.css("overflow", "visible");
 											if(currpage % 2 == 0) {
 												$dom.find(".pub_hotRefresh_item .pub_hotRefresh_front").removeClass("AMhide");
@@ -198,7 +197,7 @@ $(function() {
 										array[i].src = src;
 								}(i);
 							}
-							hotRefresh_hover();
+//							hotRefresh_hover();
 						}
 					});
 					return false;

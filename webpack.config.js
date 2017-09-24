@@ -47,9 +47,6 @@ const loaders = [{
 				},
 				{
 					loader: 'postcss-loader'
-				},
-				{
-					loader:'css?modules&importLoaders=2&localIdentName=[path]_[name]_[local]'
 				}
 			]
 		})
