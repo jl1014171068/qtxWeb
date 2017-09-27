@@ -50,6 +50,9 @@
                 border-radius: 0 20px 20px 0;
                 min-height: 38px;
                 color: #a8a4a2;
+                i {
+                    font-size: 22px;
+                }
             }
         }
         .tel {
@@ -108,6 +111,66 @@
                     font-weight: normal;
                     border-radius: 100px;
                     padding: 0 6px;
+                }
+            }
+        }
+    }
+    &.active {
+        min-width: 1028px;
+        background: #000;
+        height: 68px;
+        padding: 0 40px;
+        width: 100%;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        transition: all, 0.5s;
+        text-align: center;
+        line-height: 0;
+        font-size: 0;
+        .logo {
+            margin: 9px 0;
+            img {
+                height: 50px;
+            }
+        }
+        .header_right {
+            .tel {
+                display: none;
+            }
+            .search_form {
+
+                .head_search {
+                    background: #fff;
+                }
+                .outline {
+                    background: #fff;
+                }
+            }
+            .sign_panel{
+                a{
+                    color:#fff;
+                    line-height: 16px;
+                    margin: 0 3px;
+                }
+            }
+            .head_user_menu{
+                line-height: 16px;
+                .head_cart{
+                    .shop_cart{
+                        i{
+                            color:#fff;
+                        }
+                        .text{
+                            color:#fff;
+                        }
+                    }
+                    dt{
+                      &:before{
+                          background: #fff;
+                          top:2px;
+                      }  
+                    }
                 }
             }
         }
@@ -678,15 +741,15 @@
     }
 }
 
-.index_other{
+.index_other {
     margin-bottom: 75px;
-    .title{
+    .title {
         margin: 75px 0;
         text-align: center;
     }
-    .index_other_list{
+    .index_other_list {
         @extend .clear;
-        li{
+        li {
             float: left;
             width: 33.3%;
             text-align: center;

@@ -30,7 +30,9 @@ $(function() {
 	 * 首页多图切换专题
 	 *
 	 */
-
+   if(!$('.index_specialbox').length){
+   	return false;
+   }
 	function t() {
 		$(".index_specialbox .item").off("mouseenter").on("mouseenter", function() {
 			$(this).find(".textSpan").stop().animate({
@@ -140,16 +142,6 @@ $(function() {
 					array = [],
 					count = 0,
 					item = $dom.find('.pub_hotRefresh_item');
-
-//				function hotRefresh_hover() {
-//					item.css("overflow", "hidden"), item.on("mousemove", function() {
-//						$(this).addClass("imghover"), $(this).find(".pub_hotRefresh_box").css("display", "table-cell")
-//					}), 
-//					item.on("mouseleave", function() {}), item.on("mouseleave", function() {
-//						$(this).removeClass("imghover"), $(this).find(".pub_hotRefresh_box").css("display", "none")
-//					})
-//				}
-//				hotRefresh_hover();
 				$trigger.click(function() {
 					$.ajax({
 						type: opts.type,

@@ -3583,6 +3583,8 @@ input[type=submit] {
         border-radius: 0 20px 20px 0;
         min-height: 38px;
         color: #a8a4a2; }
+        .header .header_right .search_form .button i {
+          font-size: 22px; }
     .header .header_right .tel {
       float: left;
       color: #777777;
@@ -3632,6 +3634,42 @@ input[type=submit] {
           font-weight: normal;
           border-radius: 100px;
           padding: 0 6px; }
+  .header.active {
+    min-width: 1028px;
+    background: #000;
+    height: 68px;
+    padding: 0 40px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    transition: all, 0.5s;
+    text-align: center;
+    line-height: 0;
+    font-size: 0; }
+    .header.active .logo {
+      margin: 9px 0; }
+      .header.active .logo img {
+        height: 50px; }
+    .header.active .header_right .tel {
+      display: none; }
+    .header.active .header_right .search_form .head_search {
+      background: #fff; }
+    .header.active .header_right .search_form .outline {
+      background: #fff; }
+    .header.active .header_right .sign_panel a {
+      color: #fff;
+      line-height: 16px;
+      margin: 0 3px; }
+    .header.active .header_right .head_user_menu {
+      line-height: 16px; }
+      .header.active .header_right .head_user_menu .head_cart .shop_cart i {
+        color: #fff; }
+      .header.active .header_right .head_user_menu .head_cart .shop_cart .text {
+        color: #fff; }
+      .header.active .header_right .head_user_menu .head_cart dt:before {
+        background: #fff;
+        top: 2px; }
 
 .banner {
   width: 100%;
