@@ -117,17 +117,19 @@
     }
     &.active {
         min-width: 1028px;
-        background: #000;
+        background: #252432;
         height: 68px;
         padding: 0 40px;
         width: 100%;
-        position: relative;
+        position: fixed;
         top: 0;
         z-index: 10;
         transition: all, 0.5s;
         text-align: center;
         line-height: 0;
         font-size: 0;
+        box-shadow: 0 -1px 8px 1px #333;
+        overflow: hidden;
         .logo {
             margin: 9px 0;
             img {
@@ -135,11 +137,12 @@
             }
         }
         .header_right {
+            margin: 0;
             .tel {
                 display: none;
             }
             .search_form {
-
+                margin: 16px 0 0;
                 .head_search {
                     background: #fff;
                 }
@@ -147,29 +150,48 @@
                     background: #fff;
                 }
             }
-            .sign_panel{
-                a{
-                    color:#fff;
+            .sign_panel {
+                margin: 28px 28px 0 0;
+                a {
+                    color: #fff;
                     line-height: 16px;
                     margin: 0 3px;
                 }
             }
-            .head_user_menu{
+            .head_user_menu {
                 line-height: 16px;
-                .head_cart{
-                    .shop_cart{
-                        i{
-                            color:#fff;
+                margin: 21px 0 0;
+                .head_cart {
+                    .shop_cart {
+                        i {
+                            color: #fff;
                         }
-                        .text{
-                            color:#fff;
+                        .text {
+                            color: #fff;
                         }
                     }
-                    dt{
-                      &:before{
-                          background: #fff;
-                          top:2px;
-                      }  
+                    dt {
+                        &:before {
+                            background: #fff;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+            .top_nav {
+                float: left;
+                display: block;
+                overflow: hidden;
+                height: 68px;
+                line-height: 68px;
+                li {
+                    display: inline-block;
+                    border-bottom: #cccccc solid 1px;
+                    a {
+                        color: #fff;
+                        font-size: 14px;
+                        display: inline-block;
+                        margin-right: 25px;
                     }
                 }
             }

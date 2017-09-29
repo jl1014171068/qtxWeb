@@ -37,24 +37,28 @@ $(function() {
 		$(".index_specialbox .item").off("mouseenter").on("mouseenter", function() {
 			$(this).find(".textSpan").stop().animate({
 				"padding-left": "60px"
-			}), $(this).find("img").stop().animate({
-				left: "0"
-			}), $(this).stop().animate({
+			}),$(this).stop().animate({
 				width: "440px"
 			}), $(".index_specialbox .index_specialbox_wrapper").stop().animate({
 				"margin-left": "-60px",
 				left: i + "px"
+			}), $(this).find("img").stop().css({
+				left: "0",
+				transform:'scale(1.05)',
+				transition:'all  0.5s'
 			})
 		}), $(".index_specialbox .item").off("mouseleave").on("mouseleave", function() {
 			$(this).stop().animate({
 				width: "320px"
 			}), $(this).find(".textSpan").stop().animate({
 				"padding-left": "0"
-			}), $(this).find("img").stop().animate({
-				left: "-60px"
 			}), $(".index_specialbox .index_specialbox_wrapper").stop().animate({
 				"margin-left": 0,
 				left: i + "px"
+			}), $(this).find("img").stop().css({
+				left: "-60px",
+				transform:'scale(1.00)',
+				transition:'all 0.5s'
 			})
 		})
 	}
