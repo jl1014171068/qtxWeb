@@ -17,7 +17,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin'), //清空发布目录
 	autoprefixer = require('autoprefixer'); //添加浏览器前缀
 
 const PATHS = {
-	publicPath: '/yinuovip/dist/',
+	publicPath: '/dist/',
+	// publicPath: '/yinuovip/dist/',
 	libsPath: path.resolve(process.cwd(), './libs'),
 	srcPath: path.resolve(process.cwd(), 'src'),
 	node_modulesPath: path.resolve('./node_modules')

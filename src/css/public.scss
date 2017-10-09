@@ -73,7 +73,9 @@ input[type="text"] {
     white-space: nowrap;
     display: inline-block;
 }
-
+.no_select{
+user-select: none;
+}
 //距离公用
 .mt30 {
     margin-top: 30px !important;
