@@ -93,3 +93,5 @@ $(function () {
        }
    });
 })();
+
+$('.lazyload').lazyload();

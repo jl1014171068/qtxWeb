@@ -959,10 +959,10 @@
           content: '';
           height: 311px;
           display: block;
-          width:1px;
+          width: 1px;
           position: absolute;
-          top:-30px;
-          left:0;
+          top: -30px;
+          left: 0;
           background: url(../images/vertical_line.png) no-repeat;
         }
         .product_swiper-container {
@@ -982,29 +982,162 @@
       }
     }
   }
-  .screen_search_bar{
+  .screen_search_bar {
     width: 100%;
     height: 50px;
     background-color: #fff;
     padding: 0 7.5%;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    .screen_search_list{
-      li{
-        border: #cccccc solid 1px;
-        border-radius: 30px;
-        background: #f2f2f2;
-        box-shadow: 0 -1px 4px 1px #dbdbdb;
-        height:30px;
-        display:inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        span{
-          color:#666666;
-          font-size:14px;
+    .screent_search_bar_left {
+      @extend .clear;
+      float: left;
+      .screen_search_list {
+        float: left;
+        li {
+          border: #cccccc solid 1px;
+          border-radius: 30px;
+          background: #f2f2f2;
+          box-shadow: 0 -1px 4px 1px #dbdbdb;
+          height: 30px;
+          display: inline-block;
+          padding: 0 10px;
+          margin: 10px 0;
+          span {
+            color: #666666;
+            font-size: 14px;
+          }
+          i {
+            cursor: pointer;
+          }
         }
-        i{
-          cursor: pointer;
+      }
+      .screen_reset {
+        float: left;
+        padding: 12px 17px;
+        color: #666666;
+        font-size: 14px;
+        position: relative;
+        &:after {
+          background: url(../images/small_line.png);
+          width: 1px;
+          height: 34px;
+          content: '';
+          display: block;
+          position: absolute;
+          top: 8px;
+          right: 0;
+        }
+      }
+    }
+    .screent_search_bar_right {
+      float: right;
+      .screent_select {
+        display: inline-block;
+        min-width: 123px;
+        margin: 9px 0 0 22px;
+        position: relative;
+        &:before {
+          background: url(../images/small_gray_line.png);
+          width: 1px;
+          height: 35px;
+          content: '';
+          display: block;
+          position: absolute;
+          left: -11px;
+          top: -1px;
+        }
+        &:last-child {
+          margin-right: 11px;
+          &:after {
+            background: url(../images/small_gray_line.png);
+            width: 1px;
+            height: 35px;
+            content: '';
+            display: block;
+            position: absolute;
+            right: -11px;
+            top: -1px;
+          }
+        }
+        select {
+          color: #252432;
+          font-size: 14px;
+          height: 32px;
+        }
+      }
+
+    }
+  }
+  .product_list_grid {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 0;
+    margin: 95px 0 0 0;
+    .product_list_item {
+      float: left;
+      position: relative;
+      word-spacing: normal;
+      margin-bottom: 15px;
+      width: 289px;
+      perspective: 700px;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      .img{
+        width: 100%;
+        max-height: 100%;
+        display:block;
+        img{
+          width: 100%;
+          max-height: 100%;
+        }
+      }
+      .product_list_item_bottom {
+        padding: 6px 20px 20px;
+        .setting {
+          text-align: right;
+          margin: 5px 0;
+          i {
+            color: #cccccc;
+            margin: 0 5px;
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+        .product_list_item_box{
+          width: 100%;
+          color: #000;
+          font-size: 12px;
+          div {
+            display: inline-block;
+          }
+          h3 {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 5px 0 0;
+            line-height: 14px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            width: 100%;
+          }
+          .shop_info {
+            .price {
+              color: #ce0000;
+              font-size: 22px;
+            }
+            .count,
+            .goods_marketprice {
+              color: #808080;
+              font-size: 14px;
+              margin: 0 3px;
+            }
+          }
         }
       }
     }
